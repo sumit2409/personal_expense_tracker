@@ -8,7 +8,9 @@ and private expense records associated with your ChatGPT identity.
 ## Features
 
 - Add and delete expenses with a title, amount, category, and date.
-- View monthly spending, today's spending, and category totals in euros.
+- Record expenses in EUR, INR, USD, GBP, CAD, AUD, CHF, SGD, AED, or JPY.
+- View monthly spending, today's spending, and category totals separately by currency.
+- Existing records remain EUR; currency selection does not convert exchange rates.
 - Try an anonymous preview; preview edits are temporary.
 - Sign in with ChatGPT to save expenses in the hosted database.
 
@@ -29,6 +31,7 @@ production builds. Local database state is separate from the hosted database.
 ```sh
 npm run build
 npm run lint
+node --test tests/currency.test.mjs
 ```
 
 ## Architecture and authentication
